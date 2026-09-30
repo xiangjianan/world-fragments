@@ -36,3 +36,7 @@ python3 scripts/build.py
 Reminders access must be granted in the actual execution environment. The Mac and Codex must be available when the local task runs. 21:00 is the start time; delivery follows analysis and publication.
 
 The Pages site is public. Only distilled insights and generalized connections are published. Raw reminder snapshots stay local. Daily insights are currently written in Chinese; this README is available in English and Chinese.
+
+## Install on your phone
+
+Open the [journal](https://xiangjianan.github.io/world-fragments/) in Safari on iPhone, then choose **Share → Add to Home Screen**. On supported Android browsers, use **Install app** or the browser menu. The app opens in a standalone window and can read previously cached editions offline. New editions still require a connection. Chat notifications remain in Codex; this PWA does not add web push.
