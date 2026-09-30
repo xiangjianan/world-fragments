@@ -6,7 +6,7 @@ for path in sorted((root/'entries').glob('*.json')):
     item=json.loads(path.read_text())
     datetime.date.fromisoformat(item['date'])
     assert path.stem==item['date']
-    assert len(item['directions']) in (0,3)
+    assert len(item['directions']) == 3, 'Empty days must not create an edition'
     assert isinstance(item['note'],str)
     for d in item['directions']:
         for key in ['title','pattern','insight','connection','opportunity','uncertainty','experiment']:
