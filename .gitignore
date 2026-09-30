@@ -1,0 +1,4 @@
+bin/
+.private/
+.DS_Store
+__pycache__/
