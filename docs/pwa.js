@@ -6,7 +6,7 @@ if('serviceWorker' in navigator){
    await navigator.serviceWorker.ready;
    // Prime the data cache even on the first visit, before this page is controlled.
    const response=await fetch('./data/entries.json',{cache:'no-store'});
-   if(response.ok){const cache=await caches.open('world-fragments-pwa-v1');await cache.put('./data/entries.json',response)}
+   if(response.ok){const cache=await caches.open('world-fragments-pwa-v2');await cache.put('./data/entries.json',response)}
   }catch(error){console.warn('Offline setup unavailable:',error.message)}
  });
 }

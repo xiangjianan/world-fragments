@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='world-fragments-pwa-v1';
+const CACHE='world-fragments-pwa-v2';
 const SHELL=['./','index.html','style.css','app.js','pwa.js','icon.svg','manifest.webmanifest','icons/icon-180.png','icons/icon-192.png','icons/icon-512.png','about.html','about.zh-CN.html'];
 const BASE=new URL('./',self.location.href);
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));

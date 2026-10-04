@@ -9,6 +9,9 @@ for path in sorted((root/'entries').glob('*.json')):
     assert len(item['directions']) == 3, 'Empty days must not create an edition'
     assert isinstance(item['note'],str)
     for d in item['directions']:
+        if 'text' in d:
+            assert isinstance(d['text'], str) and 0 < len(d['text'].strip()) <= 70, path
+            continue
         for key in ['title','pattern','insight','connection','opportunity','uncertainty','experiment']:
             assert isinstance(d[key],str) and d[key].strip(),(path,key)
     entries.append(item)
